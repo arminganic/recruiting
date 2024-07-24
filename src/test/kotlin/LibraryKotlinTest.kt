@@ -4,14 +4,15 @@ import org.junit.jupiter.api.Test
 import services.LibraryService
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
-class LibraryTest {
+class LibraryKotlinTest {
     private val library: LibraryService? = null
 
     @Test
     fun shouldGetAllBooks() {
         if (library == null) {
-            assertEquals(true, false)
+            assertTrue(false)
             return
         }
         val result = library.getBooks()
@@ -26,7 +27,7 @@ class LibraryTest {
     @Test
     fun shouldGetAvailableBooks() {
         if (library == null) {
-            assertEquals(true, false)
+            assertTrue(false)
             return
         }
         val result = library.getAvailableBooks()
@@ -38,7 +39,7 @@ class LibraryTest {
     @Test
     fun shouldGetBooksByTitle() {
         if (library == null) {
-            assertEquals(true, false)
+            assertTrue(false)
             return
         }
         val result = library.getBooksByTitle("The")
@@ -51,7 +52,7 @@ class LibraryTest {
     @Test
     fun shouldGetAvailableBooksByTitle() {
         if (library == null) {
-            assertEquals(true, false)
+            assertTrue(false)
             return
         }
         val result = library.getAvailableBooksByTitle("The")
@@ -62,7 +63,7 @@ class LibraryTest {
     @Test
     fun shouldGetLentBooksByCustomer() {
         if (library == null) {
-            assertEquals(true, false)
+            assertTrue(false)
             return
         }
         val result = library.getLentBooksByCustomer(customers[3])
@@ -74,7 +75,7 @@ class LibraryTest {
     @Test
     fun shouldGetOverdueBooks() {
         if (library == null) {
-            assertEquals(true, false)
+            assertTrue(false)
             return
         }
         val result = library.getOverdueBooks()
