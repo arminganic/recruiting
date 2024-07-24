@@ -13,6 +13,13 @@ describe('Library', () => {
     expect(result).toContain(books[4])
   })
 
+  test('should get available books', () => {
+    const result = libraryService.getAvailableBooks()
+    expect(result).toHaveLength(2)
+    expect(result).toContain(books[1])
+    expect(result).toContain(books[4])
+  })
+
   test('should get books by title', () => {
     const result = libraryService.getBooksByTitle('The')
     expect(result).toHaveLength(3)
